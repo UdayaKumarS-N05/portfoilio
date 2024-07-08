@@ -6,7 +6,7 @@ function Home() {
   const [showResume, setShowResume] = useState();
 
   return (
-    <>
+    <div className="">
       <div className="relative">
         <div className="flex flex-col justify-center w-screen items-center bg-slate-500 mt-4 ">
           <div>
@@ -28,8 +28,8 @@ function Home() {
           </div>
         </div>
       </div>
-      {showResume && <Resume />}
-    </>
+      {showResume && <Resume onClose={() => setShowResume(false)} />}
+    </div>
   );
 }
 
